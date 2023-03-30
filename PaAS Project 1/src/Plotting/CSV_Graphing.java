@@ -43,7 +43,7 @@ public class CSV_Graphing {
 		PrintWriter pw = new PrintWriter(w);
 		Random rng = new Random();
 		while(scan.hasNextInt()) {
-			pw.println(scan.nextInt() + rng.nextInt(-range, range+1));
+			pw.println(scan.nextInt() + (rng.nextInt((2*range)+1) - range));
 		}
 		pw.close();
 		w.close();
